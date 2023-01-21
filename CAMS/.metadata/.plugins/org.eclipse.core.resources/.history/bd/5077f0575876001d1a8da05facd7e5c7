@@ -1,0 +1,36 @@
+package com.ns.cams.services;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.ns.cams.base.entity.User;
+import com.ns.cams.repositories.UserRepositoy;
+
+@Service
+public class UserService {
+	
+	private UserRepositoy userRepository;
+	
+	public String createUser(User user) {
+		
+		//call validation method and include validation method in utils
+		
+		User resultant = new User();		
+		resultant = userRepository.save(user);
+		
+		String responseMessage = null; 
+		if(resultant != null) {
+			responseMessage = "Sign up successful";
+		}
+		
+		return responseMessage;
+	}
+	
+	public List<User> getUserDtls() {
+		
+		User resultant = new User();		
+		resultant = userRepository.findAll();
+		
+	}
+}

@@ -1,0 +1,48 @@
+package com.ns.cams.base.controllers;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.ns.cams.base.entity.User;
+import com.ns.cams.services.UserService;
+
+@RestController
+@CrossOrigin
+@RequestMapping("/users")
+public class UserController {
+
+	@Autowired
+	private UserService userService;
+
+	@PostMapping("/signup")
+	public String CreateUser(@RequestBody User user) {
+
+		String responseMessage = userService.createUser(user);
+
+		return responseMessage;
+
+	}
+	
+	//create login method
+
+	@GetMapping("/")
+	public List<User> getUserDtls() {
+	List<User> userDetails=	userService.getUserDtls();
+	
+	return userDetails;
+	}
+	
+	@GetMapping
+	public User getUserDtlById(Integer userId) {
+		User userDtl = userService.getUserDtlById(userId);
+		
+		return userDtl;
+	}
+}

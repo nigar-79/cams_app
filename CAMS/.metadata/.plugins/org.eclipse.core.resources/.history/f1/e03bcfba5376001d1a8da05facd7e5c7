@@ -1,0 +1,8 @@
+package com.ns.cams.base.entity;
+
+import javax.persistence.Table;
+
+@Table(schema="base", name="bank_details")
+public class BankDetails {
+
+}

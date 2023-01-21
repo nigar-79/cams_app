@@ -1,0 +1,56 @@
+package com.ns.cams.base.entity;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Table()
+public class User {
+	
+	 @Id
+	 @GeneratedValue(strategy = GenerationType.IDENTITY)
+	 private int userId;
+	 
+	 @Column(name="USER_NAME")
+	 private String userName;
+	 
+	 @Column(name="login_id")
+	 private String loginID;
+	 
+	 @Column(name="password")
+	 private String password;
+	 
+	 @Column(name="email_id")
+	 private String emailId;
+	 
+	 @Column(name="phone_no")
+	 private String phoneno;
+	 
+	 @Column(name="VALID_From_DT")
+	 private Date ValidFromDt;
+	
+	 @Column(name="VALID_TO_DT")
+	 private Date ValidToDt;
+	
+	 @Column(name="account_locked")
+	 private String accountLocked;
+	 
+	 @Column(name="LAST_LOGIN")
+	 private Date LastLogin;
+	 
+	 @Column(name="USER_TYPE")
+	 private String userType;
+	 
+	 @Column(name="ALLOW_LOGIN")
+	 private boolean allowLogin;
+	 
+	 @Column(name="LOGIN_FAILED_COUNT")
+	 private int loginFailedCount;
+	 
+	 @Column(name="IS_SUPER_USER")
+	 private String isSuperUser;
+}

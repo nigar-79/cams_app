@@ -1,0 +1,13 @@
+package com.ns.cams.base.entity;
+
+import javax.annotation.Generated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Table;
+
+@Table(schema = "base", name = "organization")
+public class Organization {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+}

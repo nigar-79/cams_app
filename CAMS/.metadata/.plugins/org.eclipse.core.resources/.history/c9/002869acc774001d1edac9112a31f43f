@@ -1,0 +1,61 @@
+package com.ns.cams.base.entity;
+
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Table(schema = "base", name = "organization")
+public class Organization {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+
+	@Column(name = "org_code")
+	private String orgCode;
+	
+	@Column(name= "org_name")
+	private String OrgName;
+	
+	@Column(name="contact_person_salutation")
+	private String contactPersonSalutation;
+	
+	@Column(name="contact_person_name")
+	private String contactPersonName;
+	
+	@Column(name="org_type")
+	private String orgType;
+
+
+	@Column(name="org_type")
+	private String orgType;
+	
+	@Column(name="org_type")
+	private String orgType;
+	
+	@Column(name="org_type")
+	private String orgType;
+	
+	@Column(name="org_type")
+	private String orgType;
+	
+	@Column(name="org_type")
+	private String orgType;
+	
+	@Column(name="org_type")
+	private String orgType;
+	
+	@Column(name="org_type")
+	private String orgType;
+	
+	@Column(name="org_type")
+	private String orgType;
+	
+	@Column(name="org_type")
+	private String orgType;
+	
+	@Column(name="org_type")
+	private String orgType;
+}

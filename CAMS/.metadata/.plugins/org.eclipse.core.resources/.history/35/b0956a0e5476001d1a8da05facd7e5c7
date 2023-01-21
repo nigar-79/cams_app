@@ -1,0 +1,39 @@
+package com.ns.cams.base.entity;
+
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Table(schema="base", name="bank_details")
+public class BankDetails {
+
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int bankId;
+	
+	@Column(name = "bank_code")
+	private String bankCode;
+	
+	@Column(name = "bank_account")
+	private String bankAccount;
+	
+	@Column(name = "account_holder")
+	private String accountHolder;
+	
+	@Column(name = "bank_key")
+	private String bankKey;
+	
+	@Column(name = "vat_reg_no")
+	private String vatRegNo;
+	
+	@Column(name = "USER_NAME")
+	private String userName;
+	
+	@Column(name = "USER_NAME")
+	private String userName;
+	
+	
+}
